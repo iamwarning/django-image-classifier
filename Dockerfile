@@ -29,6 +29,6 @@ RUN pip install -r requirements.txt
 #RUN python manage.py collectstatic --no-input
 
 
-EXPOSE 8000
+EXPOSE 80
 
-CMD ["gunicorn", "--bind", ":8000", "--workers", "1", "classifier.wsgi:application"]
+CMD ["gunicorn", "--bind", ":80", "--workers", "1", "classifier.wsgi:application"]
